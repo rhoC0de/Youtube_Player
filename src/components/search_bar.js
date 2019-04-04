@@ -4,6 +4,7 @@ class SearchBar extends React.Component{
     constructor(props){
         super(props);
         this.state = {term: ''};
+        this.props = {name: 'Search'};
 
         this.onInputChange = this.onInputChange.bind(this);
     }
@@ -18,6 +19,7 @@ class SearchBar extends React.Component{
             <div className="search-bar">
             <input
             value = {this.state.term} 
+            placeholder= {this.props.name}
             onChange = {this.onInputChange} />
             </div>
         );
